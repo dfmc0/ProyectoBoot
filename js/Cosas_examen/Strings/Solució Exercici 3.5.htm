@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Exercici 3.5</title>
+		<script type="text/javascript">
+		
+			function palindromo(text) {
+			
+				var info = "La cadena de text \""+text+"\" \n";
+				
+				var lowerText = text.toLowerCase();
+					
+				var lowerTextNoSpaces = lowerText.replace(/ /g, "");	
+				var letters = lowerTextNoSpaces.split("");
+				var lettersReverse = lowerTextNoSpaces.split("").reverse();
+				
+				
+				var strLetters = letters.toString();
+				var strLettersReverse = lettersReverse.toString();
+				
+				if (strLetters == strLettersReverse) {
+					info += " és un palíndrom";
+				}
+				else {
+					info += " no és un palíndrom";
+				}				
+				
+				return info;
+			}
+			alert(palindromo("La ruta nos aporto otro paso natural"));
+			alert(palindromo("Esta frase no s'assembla a cap palíndrom"));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

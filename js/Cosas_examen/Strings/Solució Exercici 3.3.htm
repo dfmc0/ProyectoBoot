@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exercici 3.3</title>
+<script type="text/javascript">
+
+	var letters = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N','J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+
+	var dni = prompt("Introduïx el teu DNI (amb la lletra)");
+
+	if ((dni.length > 9) || (dni.length<2)) {
+		alert("El DNI introduït no és correcte");
+		exit;
+	}
+
+	var positionLetter= dni.length-1;
+	letter = dni[positionLetter].toUpperCase();
+
+	var isLetter = false;
+	for (i in letters) {
+		if (letters[i] == letter) {
+			isLetter = true;
+		}
+	} 	
+	if (!isLetter) {
+		alert("L'última posició del DNI no és una lletra");
+		exit;
+	}
+
+	var sNumberDNI="";
+	for (var i=0; i<dni.length-1; i++) {
+   	sNumberDNI = sNumberDNI + dni[i];
+	}
+	numberDNI = Number(sNumberDNI);
+
+	if (isNaN(numberDNI)) {
+		alert("El DNI introduït no és correcte");
+		exit
+	}
+	if (numberDNI < 0 || numberDNI > 99999999) {
+		alert("El DNI introduït no és correcte");
+	}
+	else {
+		var letterCalculated = letters[numberDNI % 23];
+		if (letterCalculated != letter) {
+		alert("El número de DNI i la seua lletra no són correctes");
+	}
+	else {
+		alert("El número de DNI i la seua lletra són correctes");
+	}
+}
+</script>
+</head>
+<body>
+<p>Esta página calcula la letter del DNI</p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Exercici 2.2</title>
+		<script type="text/javascript">
+		
+			var number = prompt("Introduir un nombre sencer");
+			var integer=parseInt(number);
+
+			if (isNaN(integer)) {
+			    alert("El número introduït no és correcte");
+			    exit;
+			}
+			
+			var result = evenOdd(integer);
+			alert("El número"+ integer + " és " + result); 
+			
+			if (primeNumber(integer) == true) {
+				alert("El número "+ integer + " és nombre primer");
+			} else {
+				alert("El número "+ integer + " no és nombre primer");
+			}
+			
+			function evenOdd(integer) { 
+				if (integer % 2 == 0) {
+					return "par";
+				}
+				else {
+					return "impar";
+				}
+			}
+			
+			function primeNumber(n) {
+				for(i=2; i<=n/2 ; i++) {
+					if(n%i==0){
+						return false;
+					}
+				}	
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
