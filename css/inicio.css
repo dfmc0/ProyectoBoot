@@ -22,7 +22,19 @@ header.header{
 nav.navbar{
   grid-area: nav;
   background: #f4f4f4;
-  padding: 1rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column; /* Organiza los hijos en columna */
+  justify-content: flex-start; /* Alinea el contenido al inicio (arriba) */
+  justify-items: start;
+}
+
+.navbar ul{
+  list-style: square;
+}
+.navbar a{
+  text-decoration: none;
+  color: black;
 }
 
 section.gallery {
