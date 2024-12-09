@@ -1,0 +1,27 @@
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: grid;
+  
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+header.header{
+  text-align: center;
+  padding: 2rem;
+  background-color: #396692;
+  color: white;
+}
+
+form.inicio { 
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  transition: transform 0.3s ease;
+  transform: translateY(1s);
+}
+

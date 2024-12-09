@@ -6,8 +6,8 @@ body{
     "header header header"
     "nav section aside"
     "footer footer footer";
-  grid-template-columns: auto 1fr auto; /* Proporción de las columnas */
-  grid-template-rows: auto auto auto; /* Proporción de las filas */
+  grid-template-columns: auto 1fr auto ; /* Proporción de las columnas */
+  grid-template-rows: auto 1fr auto; /* Proporción de las filas */
   height: 100vh; /* Ocupa toda la altura de la pantalla */
 }
 
@@ -21,7 +21,7 @@ header.header{
 
 nav.navbar{
   grid-area: nav;
-  background: #f4f4f4;
+  background: #bcbcbc;
   padding: 4rem;
   display: flex;
   flex-direction: column; /* Organiza los hijos en columna */
@@ -45,10 +45,12 @@ section.gallery {
 
 aside.aside {
   grid-area: aside;
-  background: #ddd;
+  background: #898989;
   padding: 1rem;
 }
-
+.aside div{
+  padding-bottom: 10px;
+}
 footer {
   grid-area: footer;
   text-align: center;
