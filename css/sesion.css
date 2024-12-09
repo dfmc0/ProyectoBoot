@@ -1,12 +1,47 @@
-body{
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  display: grid;
-  
-  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header.header{
+body {
+  height: 100vh; /* Altura completa de la ventana */
+  display: flex;
+  flex-direction: row; /* Divide el espacio horizontalmente */
+}
+
+.left, .right {
+  width: 50%; /* Ocupa la mitad del ancho */
+  height: 100%; /* Toda la altura */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+  background-position: center; /* Centra la imagen en cada sección */
+  background-repeat: no-repeat; /* No repite la imagen */
+  
+}
+
+.left {
+  background-image: url('../img/backVer.jpeg'); /* Imagen izquierda */
+  position: relative; /* Permite el centrado del contenido interno */
+}
+
+.right {
+  background-image: url('../img/backInv.jpg'); /* Imagen derecha */
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 15px;
+  padding: 1rem !important; /* Asegurar que se aplique */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px !important; /* Asegurar que se aplique */
+  width: 100% !important; /* Ancho adaptable */
+}
+
+header.header {
   text-align: center;
   padding: 2rem;
   background-color: #396692;
@@ -24,4 +59,3 @@ form.inicio {
   transition: transform 0.3s ease;
   transform: translateY(1s);
 }
-

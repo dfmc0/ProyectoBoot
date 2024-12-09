@@ -1,4 +1,5 @@
-body{
+/* Estilos Generales */
+body {
   margin: 0;
   font-family: Arial, sans-serif;
   display: grid;
@@ -6,70 +7,139 @@ body{
     "header header header"
     "nav section aside"
     "footer footer footer";
-  grid-template-columns: auto 1fr auto ; /* Proporción de las columnas */
-  grid-template-rows: auto 1fr auto; /* Proporción de las filas */
-  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
-header.header{
+/* Estilos del header */
+header {
   grid-area: header;
-  text-align: center;
-  padding: 2rem;
   background-color: #396692;
   color: white;
+  text-align: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
 }
 
-nav.navbar{
+/* Navbar vertical */
+nav {
   grid-area: nav;
-  background: #bcbcbc;
-  padding: 4rem;
-  display: flex;
-  flex-direction: column; /* Organiza los hijos en columna */
-  justify-content: flex-start; /* Alinea el contenido al inicio (arriba) */
-  justify-items: start;
+  background-color: #f8f9fa;
+  padding-top: 2rem;
+  position: sticky;
+  top: 0;
 }
 
-.navbar ul{
-  list-style: square;
+nav ul {
+  list-style: none;
+  padding-left: 0;
 }
-.navbar a{
+
+nav ul li {
+  margin: 1rem 0;
+}
+
+nav ul li a {
   text-decoration: none;
-  color: black;
+  color: #396692;
+  font-size: 1.1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
-section.gallery {
+nav ul li a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Sección principal */
+.main-section {
   grid-area: section;
-  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Esto asegura que el contenido no se estire */
+}
+
+/* Galería */
+.gallery {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 2rem; /* Asegura que no haya un espacio vacío al fondo */
+}
+
+.gallery-item {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.item-info {
   padding: 1rem;
 }
 
-aside.aside {
+.item-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.item-info p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.item-info button {
+  background-color: #396692;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.item-info button:hover {
+  background-color: #285f83;
+}
+
+/* Aside de noticias */
+aside {
   grid-area: aside;
-  background: #898989;
+  background-color: white;
   padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+  overflow-y: auto;
 }
-.aside div{
-  padding-bottom: 10px;
+
+aside .card {
+  margin-bottom: 1.5rem;
 }
+
+/* Footer */
 footer {
   grid-area: footer;
+  background-color: #396692;
+  color: white;
   text-align: center;
-    padding: 2rem;
-    background-color: #396692;
-    color: white;
-  }
-
-
-.gallery {
-  margin-top: 2rem;
-}
-
-.card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: none;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
+  padding: 1rem;
+  box-sizing: border-box;
+  min-height: 80px;
 }

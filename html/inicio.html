@@ -13,11 +13,14 @@
 </head>
 <body>
 
-<header class="header">
-  <h1>Cosas</h1>
-</header>
-<nav class="navbar">
-  <ul>
+  <!-- Header -->
+  <header>
+    <h1>Cosas</h1>
+  </header>
+
+  <!-- Navbar vertical -->
+  <nav>
+    <ul>
       <li><a href="#">Enlace 1</a></li>
       <li><a href="#">Enlace 2</a></li>
       <li><a href="#">Enlace 3</a></li>
@@ -25,87 +28,101 @@
       <li><a href="#">Enlace 5</a></li>
       <li><a href="#">Enlace 6</a></li>
       <li><a href="#">Enlace 7</a></li>
-  </ul>
-  <!-- Cambiando -->
-</nav>
-<aside class="aside">
-  <div class="row-sm row-cols-1">
-    <div class="col">
-      <div class="card card-sm animate__animated animate__fadeIn">
-        <img src="https://picsum.photos/300/200?random=1" class="card-img-top" alt="Artículo 1">
-        <div class="card-body">
-          <h5 class="card-title">Artículo 1</h5>
-          <p class="card-text">Descripción breve del artículo.</p>
-          <button class="btn btn-primary">Ver más</button>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card animate__animated animate__fadeIn">
-        <img src="https://picsum.photos/300/200?random=2" class="card-img-top" alt="Artículo 2">
-        <div class="card-body">
-          <h5 class="card-title">Artículo 2</h5>
-          <p class="card-text">Descripción breve del artículo.</p>
-          <button class="btn btn-primary">Ver más</button>
-        </div>
-      </div>
-</aside>
+    </ul>
+  </nav>
 
-
-
-
-<section class="gallery container mt-4">
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card animate__animated animate__fadeIn">
-        <img src="https://picsum.photos/300/200?random=1" class="card-img-top" alt="Artículo 1">
-        <div class="card-body">
-          <h5 class="card-title">Artículo 1</h5>
-          <p class="card-text">Descripción breve del artículo.</p>
-          <button class="btn btn-primary">Ver más</button>
+  <!-- Main Content -->
+  <div class="main-section">
+    <!-- Sección de galería (Contenido Principal) -->
+    <section class="gallery">
+      <div class="gallery-item">
+        <img src="https://picsum.photos/300/200?random=1" alt="Artículo 1">
+        <div class="item-info">
+          <h2>Artículo 1</h2>
+          <p>Descripción breve del artículo.</p>
+          <button>Ver más</button>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card animate__animated animate__fadeIn">
-        <img src="https://picsum.photos/300/200?random=2" class="card-img-top" alt="Artículo 2">
-        <div class="card-body">
-          <h5 class="card-title">Artículo 2</h5>
-          <p class="card-text">Descripción breve del artículo.</p>
-          <button class="btn btn-primary">Ver más</button>
+      <div class="gallery-item">
+        <img src="https://picsum.photos/300/200?random=2" alt="Artículo 2">
+        <div class="item-info">
+          <h2>Artículo 2</h2>
+          <p>Descripción breve del artículo.</p>
+          <button>Ver más</button>
         </div>
       </div>
-    </div><div class="col">
-      <div class="card animate__animated animate__fadeIn">
-        <img src="https://picsum.photos/300/200?random=3" class="card-img-top" alt="Artículo 2">
-        <div class="card-body">
-          <h5 class="card-title">Artículo 2</h5>
-          <p class="card-text">Descripción breve del artículo.</p>
-          <button class="btn btn-primary">Ver más</button>
+      <div class="gallery-item">
+        <img src="https://picsum.photos/300/200?random=3" alt="Artículo 3">
+        <div class="item-info">
+          <h2>Artículo 3</h2>
+          <p>Descripción breve del artículo.</p>
+          <button>Ver más</button>
         </div>
       </div>
-    </div><div class="col">
-      <div class="card animate__animated animate__fadeIn">
-        <img src="https://picsum.photos/300/200?random=4" class="card-img-top" alt="Artículo 2">
-        <div class="card-body">
-          <h5 class="card-title">Artículo 2</h5>
-          <p class="card-text">Descripción breve del artículo.</p>
-          <button class="btn btn-primary">Ver más</button>
+      <div class="gallery-item">
+        <img src="https://picsum.photos/300/200?random=4" alt="Artículo 4">
+        <div class="item-info">
+          <h2>Artículo 4</h2>
+          <p>Descripción breve del artículo.</p>
+          <button>Ver más</button>
         </div>
       </div>
-    </div>
-    <!-- Repetir para más artículos -->
+      <div class="gallery-item">
+        <img src="https://picsum.photos/300/200?random=5" alt="Artículo 4">
+        <div class="item-info">
+          <h2>Artículo 4</h2>
+          <p>Descripción breve del artículo.</p>
+          <button>Ver más</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Aside (Noticias) -->
+    <aside>
+      <div class="card animate__animated animate__fadeIn">
+        <img src="https://picsum.photos/300/200?random=1" class="card-img-top" alt="Noticia 1">
+        <div class="card-body">
+          <h5 class="card-title">Noticia 1</h5>
+          <p class="card-text">Resumen breve de la noticia.</p>
+          <a href="#" class="btn btn-primary">Leer más</a>
+        </div>
+      </div>
+      <div class="card animate__animated animate__fadeIn">
+        <img src="https://picsum.photos/300/200?random=2" class="card-img-top" alt="Noticia 2">
+        <div class="card-body">
+          <h5 class="card-title">Noticia 2</h5>
+          <p class="card-text">Resumen breve de la noticia.</p>
+          <a href="#" class="btn btn-primary">Leer más</a>
+        </div>
+      </div>
+      <div class="card animate__animated animate__fadeIn">
+        <img src="https://picsum.photos/300/200?random=3" class="card-img-top" alt="Noticia 2">
+        <div class="card-body">
+          <h5 class="card-title">Noticia 2</h5>
+          <p class="card-text">Resumen breve de la noticia.</p>
+          <a href="#" class="btn btn-primary">Leer más</a>
+        </div>
+      </div>
+      <div class="card animate__animated animate__fadeIn">
+        <img src="https://picsum.photos/300/200?random=4" class="card-img-top" alt="Noticia 2">
+        <div class="card-body">
+          <h5 class="card-title">Noticia 2</h5>
+          <p class="card-text">Resumen breve de la noticia.</p>
+          <a href="#" class="btn btn-primary">Leer más</a>
+        </div>
+      </div>
+      <!-- Repetir para más noticias... -->
+    </aside>
   </div>
-</section>
 
+  <!-- Footer -->
+  <footer>
+    <p>Valencia proyecto de bootstrap 2024</p>
+  </footer>
 
-<footer class="footer">
-  <p>Valencia proyecto de bootstrap2024</p>
-</footer>
- <!-- Bootstrap -->
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
- <!-- Archivo JavaScript externo -->
- <script src="../js/script.js" defer></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  
 </body>
 </html>
