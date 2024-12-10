@@ -31,51 +31,56 @@
     </ul>
   </nav>
 
+  
+
   <!-- Main Content -->
-  <div class="main-section">
-    <!-- Sección de galería (Contenido Principal) -->
-    <section class="gallery">
-      <div class="gallery-item">
-        <img src="https://picsum.photos/300/200?random=1" alt="Artículo 1">
-        <div class="item-info">
-          <h2>Artículo 1</h2>
-          <p>Descripción breve del artículo.</p>
-          <button>Ver más</button>
-        </div>
+    <div class="main-section">
+      <!-- Carrusel -->
+      <!-- Carrusel (Modificado) -->
+  <!-- Carrusel (con texto y botón) -->
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <!-- Primer ítem del carrusel -->
+    <div class="carousel-item active">
+      <img src="https://picsum.photos/800/400?random=1" alt="Artículo 1" class="d-block w-100">
+      <div class="carousel-caption d-flex flex-column justify-content-center">
+        <h5>Artículo 1</h5>
+        <p>Descripción breve del primer artículo.</p>
+        <a href="#" class="btn btn-primary">Ver más</a>
       </div>
-      <div class="gallery-item">
-        <img src="https://picsum.photos/300/200?random=2" alt="Artículo 2">
-        <div class="item-info">
-          <h2>Artículo 2</h2>
-          <p>Descripción breve del artículo.</p>
-          <button>Ver más</button>
-        </div>
+    </div>
+    <!-- Segundo ítem -->
+    <div class="carousel-item">
+      <img src="https://picsum.photos/800/400?random=2" alt="Artículo 2" class="d-block w-100">
+      <div class="carousel-caption d-flex flex-column justify-content-center">
+        <h5>Artículo 2</h5>
+        <p>Descripción breve del segundo artículo.</p>
+        <a href="#" class="btn btn-primary">Ver más</a>
       </div>
-      <div class="gallery-item">
-        <img src="https://picsum.photos/300/200?random=3" alt="Artículo 3">
-        <div class="item-info">
-          <h2>Artículo 3</h2>
-          <p>Descripción breve del artículo.</p>
-          <button>Ver más</button>
-        </div>
+    </div>
+    <!-- Tercer ítem -->
+    <div class="carousel-item">
+      <img src="https://picsum.photos/800/400?random=3" alt="Artículo 3" class="d-block w-100">
+      <div class="carousel-caption d-flex flex-column justify-content-center">
+        <h5>Artículo 3</h5>
+        <p>Descripción breve del tercer artículo.</p>
+        <a href="#" class="btn btn-primary">Ver más</a>
       </div>
-      <div class="gallery-item">
-        <img src="https://picsum.photos/300/200?random=4" alt="Artículo 4">
-        <div class="item-info">
-          <h2>Artículo 4</h2>
-          <p>Descripción breve del artículo.</p>
-          <button>Ver más</button>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://picsum.photos/300/200?random=5" alt="Artículo 4">
-        <div class="item-info">
-          <h2>Artículo 4</h2>
-          <p>Descripción breve del artículo.</p>
-          <button>Ver más</button>
-        </div>
-      </div>
-    </section>
+    </div>
+  </div>
+  <!-- Controles del carrusel -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+
+
     
     <!-- Aside (Noticias) -->
     <aside>
