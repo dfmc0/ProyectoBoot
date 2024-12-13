@@ -5,6 +5,7 @@ body {
   display: grid;
   grid-template-areas: 
     "header header header"
+    "ver ver ver"
     "nav section aside"
     "footer footer footer";
   grid-template-columns: auto 1fr auto;
@@ -21,9 +22,81 @@ header {
   padding: 1.5rem;
   box-sizing: border-box;
 }
+/* Navbar hotizontal*/
+
+#menunavegacion{
+  grid-area: ver;
+	margin-top:15px;
+}
+
+#menunavegacion ul{
+	list-style:none;
+	position:relative;
+	float:left;
+  background-color: #76cf98;
+	margin:0;
+	padding:0;
+
+}
+
+#menunavegacion ul a{
+	display:block;
+	color:white;
+	text-decoration:none;
+	font-weight:700;
+	font-size:12px;
+	line-height:32px;
+	padding:0 15px;
+	font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#menunavegacion ul li{
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0;
+}
+
+/*#menunavegacion ul li.current-menu-item{
+	background:#39f717
+}*/
+
+#menunavegacion ul li a:hover{
+	background: white;
+  color: #76cf98;
+}
+#menunavegacion ul ul{
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background:#76cf98;
+	padding:0;
+}
+
+#menunavegacion ul ul li{
+	float:none;
+	width:200px;
+}
+
+#menunavegacion ul li a{
+	line-height:120%;
+	padding:10px 15px;
+}
+
+#menunavegacion ul ul ul{
+	top:0;
+	left:100%;
+}
+
+#menunavegacion ul li:hover > ul{
+	display:block;
+}
+
+
 
 /* Navbar vertical */
-nav {
+.ver {
   grid-area: nav;
   background-color: #f8f9fa;
   padding: 2rem;
@@ -31,16 +104,16 @@ nav {
   top: 0;
 }
 
-nav ul {
+.ver ul {
   list-style: none;
   padding-left: 0;
 }
 
-nav ul li {
+.ver ul li {
   margin: 1rem 0;
 }
 
-nav ul li a {
+.ver ul li a {
   text-decoration: none;
   color: #396692;
   font-size: 1.1rem;
@@ -49,7 +122,7 @@ nav ul li a {
   border-radius: 5px;
 }
 
-nav ul li a:hover {
+.ver ul li a:hover {
   background-color: #f1f1f1;
 }
 
