@@ -1,0 +1,181 @@
+/* Estilos Generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-areas: 
+      "header header header"
+      "nav section aside"
+      "footer footer footer";
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+  /* Estilos del header */
+  header {
+    grid-area: header;
+    background-color: #926e59;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar vertical */
+  nav {
+    grid-area: nav;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  nav ul li {
+    margin: 1rem 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #396692;
+    font-size: 1.1rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Sección principal */
+  .main-section {
+    grid-area: section;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Esto asegura que el contenido no se estire */
+  }
+  
+  /* Galería */
+  .gallery {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding-bottom: 2rem; /* Asegura que no haya un espacio vacío al fondo */
+  }
+  #mainCarousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centrado horizontal */
+    width: 80%; /* Ajusta el ancho general */
+    max-width: 1000px; /* Establece un ancho máximo */
+    margin-bottom: 2rem; /* Añade separación inferior */
+  }
+  #mainCarousel .gallery-item img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Carrusel */
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px; /* Altura fija */
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  }
+  
+  .carousel-item img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover; /* Mantén la proporción sin deformación */
+  }
+  
+  .carousel-inner {
+    height: 450px; /* Igual que .carousel-item */
+    overflow: hidden; /* Evita contenido extra */
+  }
+  
+  .gallery-item {
+    text-align: center; /* Centra el texto y botones */
+  }
+  
+  .item-info {
+    margin-top: 1rem; /* Espaciado debajo de la imagen */
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .gallery-item img {
+    width: 100%; /* Ancho total del contenedor */
+    height: auto; /* Ajuste automático */
+    max-height: 200px; /* Altura máxima específica para las imágenes de galería */
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+  }
+  
+  .item-info {
+    padding: 1rem;
+  }
+  
+  .item-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .item-info p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .item-info button {
+    background-color: #396692;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .item-info button:hover {
+    background-color: #285f83;
+  }
+  
+  /* Aside de noticias */
+  aside {
+    grid-area: aside;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+    overflow-y: auto;
+  }
+  
+  aside .card {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Footer */
+  footer {
+    grid-area: footer;
+    background-color: #396692;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    min-height: 80px;
+  }
+  
