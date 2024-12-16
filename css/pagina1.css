@@ -26,7 +26,8 @@ header {
 
 #menunavegacion{
   grid-area: ver;
-	margin-top:15px;
+	margin-bottom:15px;
+  z-index: 5;
 }
 
 #menunavegacion ul{
