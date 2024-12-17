@@ -24,24 +24,29 @@
         </nav>
 
         <!-- BÚSQUEDA -->
-        <div id="busqueda" class="form-container">
-            <h3 class="text-success">Bienvenido</h3>
-            <form>
-                <div class="mb-3">
-                    <label for="codigo" class="form-label">Introduce tu código Postal:</label>
-                    <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Código Postal">
-                </div>
-                <div class="form-check mb-2">
-                    <input type="checkbox" class="form-check-input" id="refugioDom" name="refugioDom">
-                    <label for="refugioDom" class="form-check-label">Refugios de animales domésticos</label>
-                </div>
-                <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input" id="refugioSal" name="refugioSal">
-                    <label for="refugioSal" class="form-check-label">Refugios de animales salvajes (Requiere inicio de sesión)</label>
-                </div>
-                <button type="button" class="btn btn-success w-100">Buscar</button>
-            </form>
-        </div>
+        <!-- BÚSQUEDA -->
+            <div id="busqueda" class="form-container">
+                <h3 class="text-success">Bienvenido</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="codigo" class="form-label">Introduce tu código Postal:</label>
+                        <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Código Postal">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-check-label">Tipo de refugio:</label><br>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="refugioDom" name="refugio" value="domestic">
+                            <label for="refugioDom" class="form-check-label">Refugios de animales domésticos</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="refugioSal" name="refugio" value="wild">
+                            <label for="refugioSal" class="form-check-label">Refugios de animales salvajes (Requiere inicio de sesión)</label>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success w-100">Buscar</button>
+                </form>
+            </div>
+
 
         <!-- INICIO DE SESIÓN -->
         <div id="inicio" class="form-container d-none">
