@@ -3,82 +3,45 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Header principal */
-header {
-  background: #28a745; /* Verde Bootstrap */
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem 0;
-}
-
-header h1 {
-  font-size: 2.5rem;
+/* Sidebar */
+.sidebar h5 {
+  font-size: 1.2rem;
   font-weight: bold;
-  text-transform: uppercase;
 }
 
-/* Navbar */
-.navbar {
-  margin-bottom: 1rem;
+.sidebar ul li a {
+  color: #28a745;
+  font-size: 0.9rem;
 }
 
-.navbar-brand {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-/* Aside - Navbar vertical */
-.accordion-button {
-  font-weight: bold;
-  color: #495057;
-}
-
-.accordion-button:focus {
-  box-shadow: none;
-}
-
-.list-group-item-action:hover {
-  background-color: #28a745;
-  color: #fff;
+.sidebar ul li a:hover {
+  text-decoration: underline;
 }
 
 /* Carrusel */
-.carousel-item img {
-  border-radius: 8px;
-}
-
 .carousel-caption {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-/* Noticias */
-.card {
-  border: none;
+/* Sección Descripción */
+.section-description {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
 }
-
-.card:hover {
-  transform: translateY(-5px);
+.fab {
+  font-size: 1.5rem;
+  color: #007bff; /* Cambia el color */
 }
-
-.card-title {
-  font-weight: bold;
-  color: #28a745;
-}
-
-.card-text {
-  font-size: 0.9rem;
-  color: #555;
+.fab:hover {
+  color: #28a745; /* Cambia el color al pasar el cursor */
 }
 
 /* Footer */
 footer {
-  background: #343a40; /* Oscuro Bootstrap */
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
   font-size: 0.9rem;
 }
