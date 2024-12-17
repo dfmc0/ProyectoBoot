@@ -13,76 +13,70 @@
     <div class="right"></div>
 
     <!-- Contenedor principal -->
-    <div class="container">
+    <div class="container text-center">
         <!-- Enlaces para alternar entre formularios -->
-        <nav class="mb-4 text-center">
-            <div id="menu-enlaces" class="d-flex justify-content-center gap-4">
-                <a id="link-busqueda" href="#" class="text-success fw-bold fs-4 text-decoration-none" onclick="mostrarFormulario('busqueda')">Búsqueda</a>
-                <a id="link-inicio" href="#" class="text-success fw-bold fs-4 text-decoration-none" onclick="mostrarFormulario('inicio')">Inicia Sesión</a>
-                <a id="link-registro" href="#" class="text-success fw-bold fs-4 text-decoration-none" onclick="mostrarFormulario('registro')">Registro</a>
+        <nav class="mb-3">
+            <div id="menu-enlaces" class="d-flex justify-content-center gap-3">
+                <a id="link-busqueda" href="#" class="text-success fw-bold text-decoration-none" onclick="mostrarFormulario('busqueda')">Búsqueda</a>
+                <a id="link-inicio" href="#" class="text-success fw-bold text-decoration-none" onclick="mostrarFormulario('inicio')">Inicia Sesión</a>
+                <a id="link-registro" href="#" class="text-success fw-bold text-decoration-none" onclick="mostrarFormulario('registro')">Registro</a>
             </div>
         </nav>
 
         <!-- BÚSQUEDA -->
-        <div id="busqueda" class="form-container row justify-content-center d-flex">
-            <div class="col-12 col-md-8 col-lg-6">
-                <h3 class="text-success text-center display-5">Bienvenido</h3>
-                <form>
-                    <div class="mb-4">
-                        <label for="codigo" class="form-label fs-5">Introduce tu código Postal:</label>
-                        <input type="text" class="form-control form-control-lg" id="codigo" name="codigo" placeholder="Código Postal">
-                    </div>
-                    <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="refugioDom" name="refugioDom">
-                        <label for="refugioDom" class="form-check-label fs-5">Refugios de animales domésticos</label>
-                    </div>
-                    <div class="form-check mb-4">
-                        <input type="checkbox" class="form-check-input" id="refugioSal" name="refugioSal">
-                        <label for="refugioSal" class="form-check-label fs-5">Refugios de animales salvajes</label>
-                    </div>
-                    <button type="button" class="btn btn-success btn-lg w-100">Buscar</button>
-                </form>
-            </div>
+        <div id="busqueda" class="form-container">
+            <h3 class="text-success">Bienvenido</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="codigo" class="form-label">Introduce tu código Postal:</label>
+                    <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Código Postal">
+                </div>
+                <div class="form-check mb-2">
+                    <input type="checkbox" class="form-check-input" id="refugioDom" name="refugioDom">
+                    <label for="refugioDom" class="form-check-label">Refugios de animales domésticos</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="refugioSal" name="refugioSal">
+                    <label for="refugioSal" class="form-check-label">Refugios de animales salvajes (Requiere inicio de sesión)</label>
+                </div>
+                <button type="button" class="btn btn-success w-100">Buscar</button>
+            </form>
         </div>
 
         <!-- INICIO DE SESIÓN -->
-        <div id="inicio" class="form-container row justify-content-center d-none">
-            <div class="col-12 col-md-8 col-lg-6">
-                <h3 class="text-success text-center display-5">Inicia Sesión</h3>
-                <form>
-                    <div class="mb-4">
-                        <label for="correo" class="form-label fs-5">Correo Electrónico:</label>
-                        <input type="email" class="form-control form-control-lg" id="correo" name="correo" placeholder="Introduce tu correo">
-                    </div>
-                    <div class="mb-4">
-                        <label for="contraseña" class="form-label fs-5">Contraseña:</label>
-                        <input type="password" class="form-control form-control-lg" id="contraseña" name="contraseña" placeholder="Contraseña">
-                    </div>
-                    <button type="button" class="btn btn-success btn-lg w-100">Iniciar Sesión</button>
-                </form>
-            </div>
+        <div id="inicio" class="form-container d-none">
+            <h3 class="text-success">Inicia Sesión</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo Electrónico:</label>
+                    <input type="email" class="form-control" id="correo" name="correo" placeholder="Introduce tu correo">
+                </div>
+                <div class="mb-3">
+                    <label for="contraseña" class="form-label">Contraseña:</label>
+                    <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Contraseña">
+                </div>
+                <button type="button" class="btn btn-success w-100">Iniciar Sesión</button>
+            </form>
         </div>
 
         <!-- REGISTRO -->
-        <div id="registro" class="form-container row justify-content-center d-none">
-            <div class="col-12 col-md-8 col-lg-6">
-                <h3 class="text-success text-center display-5">Regístrate</h3>
-                <form>
-                    <div class="mb-4">
-                        <label for="correoRegistro" class="form-label fs-5">Correo Electrónico:</label>
-                        <input type="email" class="form-control form-control-lg" id="correoRegistro" name="correoRegistro" placeholder="Introduce tu correo">
-                    </div>
-                    <div class="mb-4">
-                        <label for="contraseñaRegistro" class="form-label fs-5">Contraseña:</label>
-                        <input type="password" class="form-control form-control-lg" id="contraseñaRegistro" name="contraseñaRegistro" placeholder="Contraseña">
-                    </div>
-                    <div class="mb-4">
-                        <label for="confirmaContraseña" class="form-label fs-5">Confirma Contraseña:</label>
-                        <input type="password" class="form-control form-control-lg" id="confirmaContraseña" name="confirmaContraseña" placeholder="Confirma tu contraseña">
-                    </div>
-                    <button type="button" class="btn btn-success btn-lg w-100">Registrarse</button>
-                </form>
-            </div>
+        <div id="registro" class="form-container d-none">
+            <h3 class="text-success">Regístrate</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="correoRegistro" class="form-label">Correo Electrónico:</label>
+                    <input type="email" class="form-control" id="correoRegistro" name="correoRegistro" placeholder="Introduce tu correo">
+                </div>
+                <div class="mb-3">
+                    <label for="contraseñaRegistro" class="form-label">Contraseña:</label>
+                    <input type="password" class="form-control" id="contraseñaRegistro" name="contraseñaRegistro" placeholder="Contraseña">
+                </div>
+                <div class="mb-3">
+                    <label for="confirmaContraseña" class="form-label">Confirma Contraseña:</label>
+                    <input type="password" class="form-control" id="confirmaContraseña" name="confirmaContraseña" placeholder="Confirma tu contraseña">
+                </div>
+                <button type="button" class="btn btn-success w-100">Registrarse</button>
+            </form>
         </div>
     </div>
 

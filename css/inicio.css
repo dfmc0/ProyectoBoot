@@ -1,3 +1,4 @@
+/* Estilos generales */
 * {
   margin: 0;
   padding: 0;
@@ -5,26 +6,25 @@
 }
 
 body {
-  height: 100vh; /* Altura completa de la ventana */
+  height: 100vh;
   display: flex;
-  flex-direction: row; /* Divide el espacio horizontalmente */
+  flex-direction: row;
 }
 
 .left, .right {
-  width: 50%; /* Ocupa la mitad del ancho */
-  height: 100%; /* Toda la altura */
-  background-size: cover; /* Ajusta la imagen para cubrir todo el área */
-  background-position: center; /* Centra la imagen en cada sección */
-  background-repeat: no-repeat; /* No repite la imagen */
+  width: 50%;
+  height: 100vh; /* Asegura que las imágenes cubran toda la pantalla */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .left {
-  background-image: url('../img/backVer.jpeg'); /* Imagen izquierda */
-  position: relative; /* Permite el centrado del contenido interno */
+  background-image: url('../img/backVer.jpeg');
 }
 
 .right {
-  background-image: url('../img/backInv.jpg'); /* Imagen derecha */
+  background-image: url('../img/backInv.jpg');
 }
 
 .container {
@@ -34,9 +34,9 @@ body {
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 15px;
-  padding: 2rem; /* Aumentado el padding */
+  padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 700px; /* Asegurado que el ancho sea mayor */
+  max-width: 600px;
   width: 100%;
 }
 
@@ -45,16 +45,9 @@ body {
 }
 
 #menu-enlaces a {
-  white-space: nowrap; /* Evita que el texto del enlace salte de línea */
-  font-size: 1.25rem; /* Aumentado el tamaño del texto */
+  white-space: nowrap;
+  font-size: 1.1rem;
   cursor: pointer;
-  text-decoration: none;
-  color: #28a745;
-  font-weight: bold;
-}
-
-#menu-enlaces a:hover {
-  text-decoration: underline; /* Subraya al pasar el ratón */
 }
 
 header.header {
@@ -66,7 +59,7 @@ header.header {
 
 form.inicio { 
   background: #ffffff;
-  padding: 1.5rem; /* Aumentado el padding del formulario */
+  padding: 1rem;
 }
 
 .card {
@@ -74,40 +67,5 @@ form.inicio {
   border: none;
   transition: transform 0.3s ease;
   transform: translateY(1s);
-}
-
-h3 {
-  font-size: 2rem; /* Aumentado el tamaño del texto */
-  font-weight: bold;
-  color: #28a745;
-}
-
-label {
-  font-size: 1.25rem; /* Aumentado el tamaño de las etiquetas */
-}
-
-input, .form-check-label {
-  font-size: 1.2rem; /* Aumentado el tamaño de las entradas y las etiquetas de los checkboxes */
-}
-
-input.form-control {
-  padding: 1rem; /* Aumentado el padding dentro de los inputs */
-}
-
-button {
-  font-size: 1.2rem; /* Aumentado el tamaño del texto del botón */
-  padding: 1rem;
-}
-
-.form-container {
-  padding: 2rem;
-}
-
-.form-control-lg {
-  font-size: 1.25rem; /* Aumentado el tamaño de los inputs más grandes */
-}
-
-.form-check {
-  margin-bottom: 1rem; /* Aumentado el margen entre los checkboxes */
 }
 
