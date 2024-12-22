@@ -1,21 +1,67 @@
 /* General */
 body {
   font-family: Arial, sans-serif;
+  background-color: #f5f5dc; /* Fondo beige para el cuerpo */
+  color: #333; /* Texto oscuro para contraste */
+}
+
+/* Contenedor general con imagen de fondo */
+.header-navbar-container {
+  display: flex;
+  justify-content: space-between; /* Alineación de los dos elementos a lo largo de la fila */
+  align-items: center; /* Centra verticalmente los elementos */
+  width: 50%;
+  background-image: url('../img/donfo_pagina1.png'); /* Imagen de fondo */
+  background-size: cover; /* Asegura que la imagen cubra todo el espacio */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen */
+  padding: 10px; /* Espaciado interno */
+  background-color: #ffc88f; /* Color base para que coincida si la imagen no carga */}
+
+/* Header */
+header {
+  width: 50%; /* 50% de la fila */
+  background-color: rgba(240, 200, 160, 0.8); /* Fondo translúcido que armoniza con la imagen */
+  padding: 10px; /* Espaciado interno */
+}
+
+/* Navbar */
+.navbar {
+  width: 50%; /* 50% de la fila */
+  background-color: rgba(240, 200, 160, 0.8); /* Fondo translúcido */
+  padding: 10px; /* Espaciado interno */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombras ligeras */
+}
+
+/* Links del Navbar */
+.navbar a {
+  color: #5a3d2e; /* Marrón oscuro */
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #3b2619; /* Marrón más oscuro */
+  text-decoration: underline;
 }
 
 /* Sidebar */
+.sidebar {
+  background-color: #f5f5dc; /* Beige claro */
+  border-right: 1px solid #ccc;
+  padding: 15px;
+}
+
 .sidebar h5 {
-  font-size: 1.2rem;
-  font-weight: bold;
+  color: #5a3d2e; /* Marrón */
 }
 
 .sidebar ul li a {
-  color: #28a745;
-  font-size: 0.9rem;
+  color: #5a3d2e; /* Marrón */
 }
 
 .sidebar ul li a:hover {
   text-decoration: underline;
+  color: #a58b65; /* Marrón claro para hover */
 }
 
 /* Carrusel */
@@ -28,20 +74,64 @@ body {
 
 /* Sección Descripción */
 .section-description {
-  background-color: #f8f9fa;
+  background-color: #fff8e1; /* Fondo beige claro */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333; /* Color oscuro para el texto */
 }
-.fab {
-  font-size: 1.5rem;
-  color: #007bff; /* Cambia el color */
+
+/* Testimonios */
+.blockquote-footer {
+  color: #5a3d2e; /* Marrón */
 }
-.fab:hover {
-  color: #28a745; /* Cambia el color al pasar el cursor */
+/* Estilo para el contenedor desplazable */
+.scrollable-content {
+  max-height: 900px;  /* Ajusta la altura máxima de la sección */
+  overflow-y: auto;   /* Activa el scroll vertical si el contenido excede el espacio disponible */
+  padding-right: 10px; /* Agrega espacio a la derecha para evitar que el contenido se superponga con el scroll */
 }
 
 /* Footer */
 footer {
-  font-size: 0.9rem;
+
+  color: #5a3d2e; /* Texto marrón */
+  padding: 10px;
+}
+
+/* Botones */
+.btn-success {
+  background-color: #a58b65; /* Marrón claro para botones */
+  border-color: #a58b65;
+}
+
+.btn-success:hover {
+  background-color: #937451; /* Marrón más oscuro para hover */
+  border-color: #937451;
+}
+
+/* Popovers y Tooltips */
+.tooltip-inner {
+  background-color: #5a3d2e; /* Marrón oscuro para tooltips */
+}
+
+.popover-header {
+  background-color: #5a3d2e; /* Marrón oscuro para el encabezado del popover */
+  color: white;
+}
+
+/* Personaliza el color verde (bg-success) usando un tono marrón/beige */
+.bg-success {
+  background-color: #937451 !important; /* Marrón más oscuro */
+}
+
+/* Modifica el color de los botones (btn-success) */
+.btn-success {
+  background-color: #a58b65; /* Marrón claro */
+  border-color: #a58b65;
+}
+
+/* Cambia los fondos de otras secciones si deseas algo diferente */
+.section-description {
+  background-color: #fff8e1 !important; /* Fondo beige claro */
 }

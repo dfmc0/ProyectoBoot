@@ -12,56 +12,70 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="bg-success text-white text-center py-4">
-    <h1>Sección de animales domésticos</h1>
-  </header>
+  <!-- Contenedor Principal para Header y Navbar en la misma fila -->
+  <div class="container-fluid">
+    <div class="row">
 
-  <!-- Navbar horizontal -->
+      <!-- Header en la columna 1 (50% de la fila) -->
+      <header class="col-6 header-navbar-container text-white text-center py-4" style="background-color: #ffc88f;">
+      
+      </header>
 
-  <nav class="navbar navbar-expand-lg bg-success navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Inicio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#sobre-nosotros" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Aprende más sobre nosotros">Sobre nosotros</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="veterinariasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-toggle="popover" title="Veterinarias Especializadas" data-bs-content="Selecciona una categoría de veterinarias especializadas.">
-              Veterinarias
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="veterinariasDropdown">
-              <li><a class="dropdown-item" href="#veterinaria-perros">Especializadas en perros</a></li>
-              <li><a class="dropdown-item" href="#veterinaria-gatos">Especializadas en gatos</a></li>
+      <!-- Navbar en la columna 2 (50% de la fila) -->
+      <nav class="col-6 navbar navbar-expand-lg navbar-dark" style="background-color: #ffc88f;">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#sobre-nosotros" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Aprende más sobre nosotros">Sobre nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="veterinariasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-toggle="popover" title="Veterinarias Especializadas" data-bs-content="Selecciona una categoría de veterinarias especializadas.">
+                  Veterinarias
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="veterinariasDropdown">
+                  <li><a class="dropdown-item" href="#veterinaria-perros">Especializadas en perros</a></li>
+                  <li><a class="dropdown-item" href="#veterinaria-gatos">Especializadas en gatos</a></li>
+                </ul>
+              </li>
             </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+          </div>
+        </div>
+      </nav>
 
+    </div>
+  </div>
+ <!-- Breadcrumbs -->
+ <div class="row">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-3">
+      <li class="breadcrumb-item"><a style="text-decoration: none;" href="inicio.html">Inicio</a></li>
+      <li class="breadcrumb-item"><a style="text-decoration: none;" href="#" aria-current="page">Sección de Animales domesticos</a></li>
+    </ol>
+  </nav>
+</div>
   <!-- Contenedor Principal -->
   <div class="container-fluid mt-4">
     <div class="row">
       
       <!-- Barra lateral izquierda -->
       <aside class="col-md-2 bg-light p-3 border-end sidebar">
-        <h5 class="text-success">Información Útil</h5>
+        <h5 style="color: #3c2f2f;">Información Útil</h5>
         <ul class="list-unstyled">
             <li><a href="#servicios" data-bs-toggle="tooltip" data-bs-placement="right"  class="text-decoration-none" title="Consulta Veterinaria y más">Consulta Veterinaria</a></li>
             <li><a href="#servicios" data-bs-toggle="tooltip" data-bs-placement="right"  class="text-decoration-none" title="Consulta sobre las vacunas necesarias">Vacunación</a></li>
             <li><a href="#testimonios" data-bs-toggle="tooltip" data-bs-placement="right"   class="text-decoration-none" title="Adopta y ayuda">Adopción</a></li>
             <li><a href="#sobre-nosotros" data-bs-toggle="tooltip" data-bs-placement="right"   class="text-decoration-none" title="Información sobre nosotros">Sobre Nosotros</a></li>
         </ul>
-        <h5 class="text-success mt-4">Síguenos</h5>
+        <h5 class="mt-4" style="color: #3c2f2f;">Síguenos</h5>
 <ul class="list-unstyled d-flex">
     <li>
         <a href="https://www.facebook.com" class="text-decoration-none me-3" target="_blank">
-            <i class="bi bi-facebook fs-2"></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <i class="bi bi-facebook fs-2 --bs-primary "></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
               <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
             </svg>
         </a>
@@ -94,15 +108,15 @@
         
         <!-- Sección Bienvenida -->
         <section id="sobre-nosotros" class="section-description">
-          <h3 class="text-center mb-4">Bienvenido</h3>
+          <h3 class="text-center mb-4">Bienvenido (Para el proyecto)</h3>
           <p class="text-justify">
-            Nuestra página busca conectar a quienes aman a los animales con oportunidades para adoptar, colaborar y ayudar a diferentes especies que necesitan un hogar. Desde perros y gatos hasta aves y pequeños roedores, ¡tú puedes hacer la diferencia!
+            Esta página sera de intermediario entre otras para el encontrar o ayudar una nueva mascota, se implemento bootstrap para enlaces, carousel y demás elementos algunos escondidos e interactuables al clicar o mantener el cursor encima
           </p>
         </section>
 
         <!-- Carrusel de Servicios y Mascotas -->
         <section id="servicios" class="mt-4">
-          <h3 class="text-center mb-4 text-success">Nuestros Servicios y Mascotas</h3>
+          <h3 class="text-center style="color: #3c2f2f">Nuestros Servicios y Mascotas</h3>
           <div id="carouselServicios" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -134,39 +148,101 @@
         </section>
 
         <!-- Testimonios -->
-        <section id="testimonios" class="mt-5">
-          <h3 class="text-center mb-4 text-success">Testimonios</h3>
-          <div class="row">
-            <div class="col-md-6 mb-4">
-              <div class="card p-3"  data-bs-toggle="popover" title="Testimonio de Tatiana" >
-                <blockquote class="blockquote mb-0">
-                  <p>"Rescatamos a Tenshi y llenó nuestro hogar de amor."</p>
-                  <footer class="blockquote-footer">Tatiana Valvidia</footer>
-                </blockquote>
-              </div>
-            </div>
-            <div class="col-md-6 mb-4">
-              <div class="card p-3">
-                <blockquote class="blockquote mb-0"  data-bs-toggle="popover" title="Testimonio de José" >
-                  <p>"Adoptar fue la mejor decisión que hemos tomado."</p>
-                  <footer class="blockquote-footer">José Martínez</footer>
-                </blockquote>
-              </div>
+      <section id="testimonios" class="mt-5">
+        <h3 class="text-center mb-4" style="color: #3c2f2f;">Testimonios</h3>
+        <p align="center">(click en ellos para ver los autores)</p>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card p-3" data-bs-toggle="popover" data-bs-placement="bottom" title="Testimonio de Tatiana" >
+              <blockquote class="blockquote mb-0">
+                <p>"Rescatamos a Tenshi y llenó nuestro hogar de amor."</p>
+              </blockquote>
             </div>
           </div>
-        </section>
+          <div class="col-md-6 mb-4">
+            <div class="card p-3" data-bs-toggle="popover" data-bs-placement="bottom" title="Testimonio de José">
+              <blockquote class="blockquote mb-0">
+                <p>"Adoptar fue la mejor decisión que hemos tomado."</p>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card p-3" data-bs-toggle="popover" data-bs-placement="bottom" title="Testimonio de Raul">
+              <blockquote class="blockquote mb-0">
+                <p>"Mi hija amo encontrar a un nuevo compañero."</p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card p-3" data-bs-toggle="popover" data-bs-placement="bottom" title="Testimonio de Dolores">
+              <blockquote class="blockquote mb-0">
+                <p>"Muy agradecida de poder ayudar a los pequeños amigos del hombre."</p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
       </main>
 
       <!-- Barra lateral derecha -->
-      <aside class="col-md-2 bg-light p-3 border-start sidebar">
-        <h5 class="text-success">Noticias y Consejos</h5>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-decoration-none">Consejos de alimentación</a></li>
-          <li><a href="#" class="text-decoration-none">Vacunas necesarias</a></li>
-        </ul>
-        <hr>
-        <img src="https://picsum.photos/800/400?random=1"class="img-fluid rounded" alt="Publicidad">
-      </aside>
+<!-- Barra lateral derecha -->
+<aside class="col-md-2 bg-light p-3 border-start sidebar">
+  <h5 style="color: #3c2f2f;">Noticias y Consejos</h5>
+
+  <!-- Lista de enlaces a consejos -->
+  <ul class="list-unstyled">
+    <li><a href="#" class="text-decoration-none" style="color: #3c2f2f;">Consejos de alimentación</a></li>
+    <li><a href="#" class="text-decoration-none" style="color: #3c2f2f;">Vacunas necesarias</a></li>
+  </ul>
+
+  <hr>
+
+  <!-- Contenedor desplazable de noticias y consejos -->
+  <div class="scrollable-content">
+    <!-- Cartas para mostrar noticias o consejos -->
+    <div class="card mb-3" style="max-width: 18rem;">
+      <img src="https://picsum.photos/800/400?random=1" class="card-img-top" alt="Noticia 1">
+      <div class="card-body">
+        <h5 class="card-title" style="color: #3c2f2f;">Noticia 1: Nuevas recomendaciones para la salud de tu mascota</h5>
+        <p class="card-text" style="color: #3c2f2f;">Descubre cómo mejorar la calidad de vida de tus animales con estos consejos útiles sobre alimentación y salud.</p>
+        <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
+      </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 18rem;">
+      <img src="https://picsum.photos/800/400?random=2" class="card-img-top" alt="Noticia 2">
+      <div class="card-body">
+        <h5 class="card-title" style="color: #3c2f2f;">Noticia 2: Consejos para vacunar a tu perro</h5>
+        <p class="card-text" style="color: #3c2f2f;">Infórmate sobre los momentos ideales para vacunar a tu perro y mantenerlo saludable.</p>
+        <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
+      </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 18rem;">
+      <img src="https://picsum.photos/800/400?random=3" class="card-img-top" alt="Noticia 3">
+      <div class="card-body">
+        <h5 class="card-title" style="color: #3c2f2f;">Noticia 3: Adopción de mascotas en refugios locales</h5>
+        <p class="card-text" style="color: #3c2f2f;">Entérate de las opciones para adoptar un perro o gato en tu ciudad y hacer una gran diferencia.</p>
+        <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
+      </div>
+    </div>
+
+    <!-- Agregar más cartas si es necesario -->
+    <div class="card mb-3" style="max-width: 18rem;">
+      <img src="https://picsum.photos/800/400?random=4" class="card-img-top" alt="Noticia 4">
+      <div class="card-body">
+        <h5 class="card-title" style="color: #3c2f2f;">Noticia 4: Preparación para las emergencias con mascotas</h5>
+        <p class="card-text" style="color: #3c2f2f;">Prepara tu hogar y a tu mascota ante posibles emergencias y situaciones imprevistas.</p>
+        <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
+      </div>
+    </div>
+
+    <!-- Puedes seguir agregando más noticias o consejos aquí -->
+  </div>
+</aside>
+
 
     </div>
   </div>
