@@ -1,7 +1,4 @@
-/**
- * Función para mostrar el formulario correspondiente
- * @param {string} formulario - El ID del formulario a mostrar
- */
+
 function mostrarFormulario(formulario) {
     // Ocultar todos los formularios y agregar la clase d-none
     ['busqueda', 'inicio', 'registro'].forEach((id) => {

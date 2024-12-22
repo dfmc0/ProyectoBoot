@@ -1,4 +1,3 @@
-/* Estilos generales */
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +7,12 @@
 body {
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .left, .right {
   width: 50%;
-  height: 100vh; /* Asegura que las imágenes cubran toda la pantalla */
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -27,17 +26,21 @@ body {
   background-image: url('../img/backInv.jpg');
 }
 
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Contenedor principal */
+.main-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   border-radius: 15px;
-  padding: 1rem;
+  padding: 1rem; /* Puedes reducir a 0.5rem si prefieres más compactación */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  max-width: 450px; /* Puedes reducir esto a un valor más bajo si quieres menos ancho */
   width: 100%;
+  margin: auto;
 }
 
 #menu-enlaces {
@@ -50,22 +53,53 @@ body {
   cursor: pointer;
 }
 
-header.header {
-  text-align: center;
-  padding: 2rem;
-  background-color: #396692;
-  color: white;
-}
-
+/* Estilo del formulario */
 form.inicio { 
   background: #ffffff;
   padding: 1rem;
 }
 
+/* Estilo de las tarjetas */
 .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: none;
   transition: transform 0.3s ease;
-  transform: translateY(1s);
 }
 
+.card:hover {
+  transform: translateY(-5px);
+}
+.container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  padding: 1rem; /* Puedes reducir a 0.5rem si prefieres más compactación */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 450px; /* Puedes reducir esto a un valor más bajo si quieres menos ancho */
+  width: 100%;
+  margin: auto;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  margin-top: auto; /* Empuja el footer al final */
+}
+
+.site-footer .collapse {
+  margin-top: 1rem;
+}
+
+.site-footer button {
+  width: 100%;
+  max-width: 600px;
+}

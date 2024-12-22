@@ -50,6 +50,12 @@ Te dare una lista de componentes de bootstrap:
 - Spinners
 - Toast
 - Tooltips      
+
+
+
+
+
+
 PAGINA 1
 <!DOCTYPE html>
 <html lang="en">
@@ -145,6 +151,8 @@ PAGINA 1
     <script src="../js/formularios.js"></script>
 </body>
 </html>
+
+
 
 PAGINA 2
 <!DOCTYPE html>
