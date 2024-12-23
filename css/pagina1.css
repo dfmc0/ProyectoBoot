@@ -47,11 +47,10 @@ header {
 
 /* Sidebar */
 .sidebar {
-  background-color: #f5f5dc; /* Beige claro */
-  border-right: 1px solid #ccc;
-  padding: 15px;
-  height: 100vh; /* Asegura que la barra lateral ocupe toda la altura de la ventana */
-  overflow-y: auto; /* Permite el desplazamiento si el contenido es demasiado grande */
+  position: sticky;
+  top: 0;  /* Hace que se quede pegado en la parte superior al hacer scroll */
+  height: 30%; /* Asegura que el aside tenga la altura completa de la ventana */
+  overflow-y: auto; /* Añade desplazamiento si el contenido es más largo que la altura disponible */
 }
 
 .sidebar h5 {
