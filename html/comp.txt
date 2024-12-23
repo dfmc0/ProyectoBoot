@@ -29,34 +29,31 @@ Te dare una lista de componentes de bootstrap:
 - Accordion     
 - Alert         
 - Badge
-- Breadcumb
-- Buttons       
+- Breadcumb      //listo
+- Buttons        //listo
 - Buttongroup
-- Card          
-- Carousel      
+- Card           //listo
+- Carousel       //listo
 - Closebutton
-- Collapse  
+- Collapse       //listo
 - Dropdowns     
 - List group
 - Modal 
-- Navbar
+- Navbar         //listo
 - Navs & tabs   
 - Offcanvas
 - Pagination
 - PLaceholders
-- Popovers       
+- Popovers        //listo
 - Progress
 - Scrollspy
 - Spinners
 - Toast
-- Tooltips      
+- Tooltips       //listo
 
 
 
-
-
-
-PAGINA 1
+Pagina 1
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,12 +64,14 @@ PAGINA 1
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/inicio.css">
 </head>
-<body>
-    <div class="left"></div>
-    <div class="right"></div>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Divisiones de fondo -->
+    <div class="left position-fixed top-0 start-0 w-50 h-100 bg-success"></div>
+    <div class="right position-fixed top-0 end-0 w-50 h-100 bg-secondary"></div>
 
     <!-- Contenedor principal -->
-    <div class="container text-center">
+    <div class="main-container container w-50 bg-white shadow rounded text-center my-5">
+
         <!-- Enlaces para alternar entre formularios -->
         <nav class="mb-3">
             <div id="menu-enlaces" class="d-flex justify-content-center gap-3">
@@ -83,29 +82,27 @@ PAGINA 1
         </nav>
 
         <!-- BÚSQUEDA -->
-        <!-- BÚSQUEDA -->
-            <div id="busqueda" class="form-container">
-                <h3 class="text-success">Bienvenido</h3>
-                <form>
-                    <div class="mb-3">
-                        <label for="codigo" class="form-label">Introduce tu código Postal:</label>
-                        <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Código Postal">
+        <div id="busqueda" class="form-container">
+            <h3 class="text-success">Bienvenido</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="codigo" class="form-label">Introduce tu código Postal:</label>
+                    <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Código Postal">
+                </div>
+                <div class="mb-2">
+                    <label class="form-check-label">Tipo de refugio:</label><br>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="refugioDom" name="refugio" value="domestic">
+                        <label for="refugioDom" class="form-check-label">Refugios de animales domésticos</label>
                     </div>
-                    <div class="mb-2">
-                        <label class="form-check-label">Tipo de refugio:</label><br>
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input" id="refugioDom" name="refugio" value="domestic">
-                            <label for="refugioDom" class="form-check-label">Refugios de animales domésticos</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input" id="refugioSal" name="refugio" value="wild">
-                            <label for="refugioSal" class="form-check-label">Refugios de animales salvajes (Requiere inicio de sesión)</label>
-                        </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="refugioSal" name="refugio" value="wild">
+                        <label for="refugioSal" class="form-check-label">Refugios de animales salvajes (Requiere inicio de sesión)</label>
                     </div>
-                    <button type="button" class="btn btn-success w-100">Buscar</button>
-                </form>
-            </div>
-
+                </div>
+                <button type="button" class="btn btn-success w-100">Buscar</button>
+            </form>
+        </div>
 
         <!-- INICIO DE SESIÓN -->
         <div id="inicio" class="form-container d-none">
@@ -144,17 +141,31 @@ PAGINA 1
         </div>
     </div>
 
+    <!-- Descripción de la página -->
+    <footer class="site-footer mt-auto bg-light py-5">
+        <div class="container">
+            <button class="btn btn-outline-success w-100" type="button" data-bs-toggle="collapse" data-bs-target="#descripcionCollapse" aria-expanded="false" aria-controls="descripcionCollapse">
+                ¿De qué trata esta página?
+            </button>
+            <div class="collapse mt-3" id="descripcionCollapse">
+                <div class="card card-body">
+                    Esta página tiene como objetivo principal facilitar el acceso a información de refugios para animales, 
+                    permitiendo a los usuarios buscar según el tipo de refugio que necesitan. También proporciona opciones 
+                    para iniciar sesión o registrarse, habilitando funcionalidades avanzadas como acceso a refugios de 
+                    animales salvajes.
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-    <!-- Enlace al archivo JavaScript externo -->
     <script src="../js/formularios.js"></script>
 </body>
 </html>
 
-
-
-PAGINA 2
+Pagina 2
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -169,69 +180,94 @@ PAGINA 2
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="bg-success text-white text-center py-4">
-    <h1>Sección de animales domésticos</h1>
-  </header>
+  <!-- Contenedor Principal para Header y Navbar en la misma fila -->
+  <div class="container-fluid">
+    <div class="row">
 
-  <!-- Navbar horizontal -->
+      <!-- Header en la columna 1 (50% de la fila) -->
+      <header class="col-6 header-navbar-container text-white text-center py-4" style="background-color: #ffc88f;">
+      
+      </header>
 
-  <nav class="navbar navbar-expand-lg bg-success navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Inicio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#sobre-nosotros">Sobre nosotros</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="veterinariasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Veterinarias
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#veterinaria-perros">Especializadas en perros</a></li>
-              <li><a class="dropdown-item" href="#veterinaria-gatos">Especializadas en gatos</a></li>
+      <!-- Navbar en la columna 2 (50% de la fila) -->
+      <nav class="col-6 navbar navbar-expand-lg navbar-dark" style="background-color: #ffc88f;">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#sobre-nosotros" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Aprende más sobre nosotros">Sobre nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="veterinariasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-toggle="popover" title="Veterinarias Especializadas" data-bs-content="Selecciona una categoría de veterinarias especializadas.">
+                  Veterinarias
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="veterinariasDropdown">
+                  <li><a class="dropdown-item" href="#veterinaria-perros">Especializadas en perros</a></li>
+                  <li><a class="dropdown-item" href="#veterinaria-gatos">Especializadas en gatos</a></li>
+                </ul>
+              </li>
             </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="adopcionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Adopta una mascota
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#adopta-perros">Perros</a></li>
-              <li><a class="dropdown-item" href="#adopta-gatos">Gatos</a></li>
-              <li><a class="dropdown-item" href="#adopta-aves">Aves</a></li>
-              <li><a class="dropdown-item" href="#adopta-roedores">Roedores</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+          </div>
+        </div>
+      </nav>
+
     </div>
+  </div>
+ <!-- Breadcrumbs -->
+ <div class="row">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-3">
+      <li class="breadcrumb-item"><a style="text-decoration: none;" href="inicio.html">Inicio</a></li>
+      <li class="breadcrumb-item"><a style="text-decoration: none;" href="#" aria-current="page">Sección de Animales domesticos</a></li>
+    </ol>
   </nav>
-
+</div>
   <!-- Contenedor Principal -->
   <div class="container-fluid mt-4">
     <div class="row">
       
       <!-- Barra lateral izquierda -->
       <aside class="col-md-2 bg-light p-3 border-end sidebar">
-        <h5 class="text-success">Información Útil</h5>
+        <h5 style="color: #3c2f2f;">Información Útil</h5>
         <ul class="list-unstyled">
-            <li><a href="#servicios" class="text-decoration-none">Consulta Veterinaria</a></li>
-            <li><a href="#servicios" class="text-decoration-none">Vacunación</a></li>
-            <li><a href="#testimonios" class="text-decoration-none">Adopción</a></li>
-            <li><a href="#sobre-nosotros" class="text-decoration-none">Sobre Nosotros</a></li>
+            <li><a href="#servicios" data-bs-toggle="tooltip" data-bs-placement="right"  class="text-decoration-none" title="Consulta Veterinaria y más">Consulta Veterinaria</a></li>
+            <li><a href="#servicios" data-bs-toggle="tooltip" data-bs-placement="right"  class="text-decoration-none" title="Consulta sobre las vacunas necesarias">Vacunación</a></li>
+            <li><a href="#testimonios" data-bs-toggle="tooltip" data-bs-placement="right"   class="text-decoration-none" title="Adopta y ayuda">Adopción</a></li>
+            <li><a href="#sobre-nosotros" data-bs-toggle="tooltip" data-bs-placement="right"   class="text-decoration-none" title="Información sobre nosotros">Sobre Nosotros</a></li>
         </ul>
-        <h5 class="text-success mt-4">Síguenos</h5>
-        <ul class="list-unstyled d-flex">
-            <li><a href="https://www.facebook.com" class="text-decoration-none me-3"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="https://twitter.com" class="text-decoration-none me-3"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com" class="text-decoration-none me-3"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://www.linkedin.com" class="text-decoration-none"><i class="fab fa-linkedin-in"></i></a></li>
-        </ul>
+        <h5 class="mt-4" style="color: #3c2f2f;">Síguenos</h5>
+<ul class="list-unstyled d-flex">
+    <li>
+        <a href="https://www.facebook.com" class="text-decoration-none me-3" target="_blank">
+            <i class="bi bi-facebook fs-2 --bs-primary "></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a href="https://twitter.com" class="text-decoration-none me-3" target="_blank">
+            <i class="bi bi-twitter fs-2"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+              <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com" class="text-decoration-none me-3" target="_blank">
+            <i class="bi bi-instagram fs-2"></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.linkedin.com" class="text-decoration-none" target="_blank">
+            <i class="bi bi-linkedin fs-2"></i> <!-- Icono de LinkedIn -->
+        </a>
+    </li>
+</ul>
     </aside>
     
 
@@ -240,15 +276,15 @@ PAGINA 2
         
         <!-- Sección Bienvenida -->
         <section id="sobre-nosotros" class="section-description">
-          <h3 class="text-center mb-4">Bienvenido</h3>
+          <h3 class="text-center mb-4">Bienvenido (Para el proyecto)</h3>
           <p class="text-justify">
-            Nuestra página busca conectar a quienes aman a los animales con oportunidades para adoptar, colaborar y ayudar a diferentes especies que necesitan un hogar. Desde perros y gatos hasta aves y pequeños roedores, ¡tú puedes hacer la diferencia!
+            Esta página sera de intermediario entre otras para el encontrar o ayudar una nueva mascota, se implemento bootstrap para enlaces, carousel y demás elementos algunos escondidos e interactuables al clicar o mantener el cursor encima
           </p>
         </section>
 
         <!-- Carrusel de Servicios y Mascotas -->
         <section id="servicios" class="mt-4">
-          <h3 class="text-center mb-4 text-success">Nuestros Servicios y Mascotas</h3>
+          <h3 class="text-center style="color: #3c2f2f">Nuestros Servicios y Mascotas</h3>
           <div id="carouselServicios" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -280,39 +316,101 @@ PAGINA 2
         </section>
 
         <!-- Testimonios -->
-        <section id="testimonios" class="mt-5">
-          <h3 class="text-center mb-4 text-success">Testimonios</h3>
-          <div class="row">
-            <div class="col-md-6 mb-4">
-              <div class="card p-3">
-                <blockquote class="blockquote mb-0">
-                  <p>"Rescatamos a Tenshi y llenó nuestro hogar de amor."</p>
-                  <footer class="blockquote-footer">Tatiana Valvidia</footer>
-                </blockquote>
-              </div>
-            </div>
-            <div class="col-md-6 mb-4">
-              <div class="card p-3">
-                <blockquote class="blockquote mb-0">
-                  <p>"Adoptar fue la mejor decisión que hemos tomado."</p>
-                  <footer class="blockquote-footer">José Martínez</footer>
-                </blockquote>
-              </div>
+      <section id="testimonios" class="mt-5">
+        <h3 class="text-center mb-4" style="color: #3c2f2f;">Testimonios</h3>
+        <p align="center">(click en ellos para ver los autores)</p>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card p-3" data-bs-toggle="popover" data-bs-placement="bottom" title="Testimonio de Tatiana" >
+              <blockquote class="blockquote mb-0">
+                <p>"Rescatamos a Tenshi y llenó nuestro hogar de amor."</p>
+              </blockquote>
             </div>
           </div>
-        </section>
+          <div class="col-md-6 mb-4">
+            <div class="card p-3" data-bs-toggle="popover" data-bs-placement="bottom" title="Testimonio de José">
+              <blockquote class="blockquote mb-0">
+                <p>"Adoptar fue la mejor decisión que hemos tomado."</p>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card p-3" data-bs-toggle="popover" data-bs-placement="bottom" title="Testimonio de Raul">
+              <blockquote class="blockquote mb-0">
+                <p>"Mi hija amo encontrar a un nuevo compañero."</p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card p-3" data-bs-toggle="popover" data-bs-placement="bottom" title="Testimonio de Dolores">
+              <blockquote class="blockquote mb-0">
+                <p>"Muy agradecida de poder ayudar a los pequeños amigos del hombre."</p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
       </main>
 
       <!-- Barra lateral derecha -->
-      <aside class="col-md-2 bg-light p-3 border-start sidebar">
-        <h5 class="text-success">Noticias y Consejos</h5>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-decoration-none">Consejos de alimentación</a></li>
-          <li><a href="#" class="text-decoration-none">Vacunas necesarias</a></li>
-        </ul>
-        <hr>
-        <img src="https://picsum.photos/800/400?random=1"class="img-fluid rounded" alt="Publicidad">
-      </aside>
+<!-- Barra lateral derecha -->
+<aside class="col-md-2 bg-light p-3 border-start sidebar">
+  <h5 style="color: #3c2f2f;">Noticias y Consejos</h5>
+
+  <!-- Lista de enlaces a consejos -->
+  <ul class="list-unstyled">
+    <li><a href="#" class="text-decoration-none" style="color: #3c2f2f;">Consejos de alimentación</a></li>
+    <li><a href="#" class="text-decoration-none" style="color: #3c2f2f;">Vacunas necesarias</a></li>
+  </ul>
+
+  <hr>
+
+  <!-- Contenedor desplazable de noticias y consejos -->
+  <div class="scrollable-content">
+    <!-- Cartas para mostrar noticias o consejos -->
+    <div class="card mb-3" style="max-width: 18rem;">
+      <img src="https://picsum.photos/800/400?random=1" class="card-img-top" alt="Noticia 1">
+      <div class="card-body">
+        <h5 class="card-title" style="color: #3c2f2f;">Noticia 1: Nuevas recomendaciones para la salud de tu mascota</h5>
+        <p class="card-text" style="color: #3c2f2f;">Descubre cómo mejorar la calidad de vida de tus animales con estos consejos útiles sobre alimentación y salud.</p>
+        <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
+      </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 18rem;">
+      <img src="https://picsum.photos/800/400?random=2" class="card-img-top" alt="Noticia 2">
+      <div class="card-body">
+        <h5 class="card-title" style="color: #3c2f2f;">Noticia 2: Consejos para vacunar a tu perro</h5>
+        <p class="card-text" style="color: #3c2f2f;">Infórmate sobre los momentos ideales para vacunar a tu perro y mantenerlo saludable.</p>
+        <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
+      </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 18rem;">
+      <img src="https://picsum.photos/800/400?random=3" class="card-img-top" alt="Noticia 3">
+      <div class="card-body">
+        <h5 class="card-title" style="color: #3c2f2f;">Noticia 3: Adopción de mascotas en refugios locales</h5>
+        <p class="card-text" style="color: #3c2f2f;">Entérate de las opciones para adoptar un perro o gato en tu ciudad y hacer una gran diferencia.</p>
+        <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
+      </div>
+    </div>
+
+    <!-- Agregar más cartas si es necesario -->
+    <div class="card mb-3" style="max-width: 18rem;">
+      <img src="https://picsum.photos/800/400?random=4" class="card-img-top" alt="Noticia 4">
+      <div class="card-body">
+        <h5 class="card-title" style="color: #3c2f2f;">Noticia 4: Preparación para las emergencias con mascotas</h5>
+        <p class="card-text" style="color: #3c2f2f;">Prepara tu hogar y a tu mascota ante posibles emergencias y situaciones imprevistas.</p>
+        <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
+      </div>
+    </div>
+
+    <!-- Puedes seguir agregando más noticias o consejos aquí -->
+  </div>
+</aside>
+
 
     </div>
   </div>
@@ -324,10 +422,12 @@ PAGINA 2
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/boot_tools.js"></script>
 </body>
 </html>
 
- PAGINA 3
+
+Pagina 3
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -348,15 +448,15 @@ PAGINA 2
 
   <!-- Header -->
   <header>
-    <h1>Sección de Animales Salvajes</h1>
+   
   </header>
 
   <!-- Navbar vertical -->
   <nav>
     <ul>
-      <li><a href="#">Inicio</a></li>
+      <li><a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Inicio de la página">Inicio</a></li>
       <li>
-        <a href="#">Reservas Naturales</a>
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Ver todas las reservas naturales">Reservas Naturales</a>
         <ul class="submenu">
           <li><a href="#">Selvas</a></li>
           <li><a href="#">Bosques</a></li>
@@ -364,18 +464,28 @@ PAGINA 2
         </ul>
       </li>
       <li>
-        <a href="#">Refugios</a>
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Ver refugios para diferentes animales">Refugios</a>
         <ul class="submenu">
           <li><a href="#">Mamíferos</a></li>
           <li><a href="#">Reptiles</a></li>
           <li><a href="#">Aves</a></li>
         </ul>
       </li>
-      <li><a href="#">Proyectos Actuales</a></li>
-      <li><a href="#">Contacto</a></li>
+      <li><a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Información sobre proyectos actuales">Proyectos Actuales</a></li>
+      <li><a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Contáctanos para más detalles">Contacto</a></li>
     </ul>
   </nav>
-  
+
+ 
+</div>
+ <!-- Breadcrumbs -->
+ <div class="row">
+  <div aria-label="breadcrumb">
+    <ol class="breadcrumb m-3">
+      <li class="breadcrumb-item"><a style="text-decoration: none;" href="inicio.html">Inicio</a></li>
+      <li class="breadcrumb-item"><a style="text-decoration: none;" href="#" aria-current="page">Sección de Animales Salvajes</a></li>
+    </ol>
+  </div>
   <!-- Sección Bienvenida -->
   <section id="sobre-nosotros" class="section-description">
     <h3 class="text-center mb-4">Bienvenido</h3>
@@ -454,6 +564,7 @@ PAGINA 2
       </aside>
     </div>
   </div>
+ 
 
   <!-- Footer -->
   <footer>
@@ -463,5 +574,6 @@ PAGINA 2
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  <script src="../js/boot_tools.js"></script>
 </body>
 </html>

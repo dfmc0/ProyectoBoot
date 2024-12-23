@@ -21,129 +21,175 @@
    
   </header>
 
-  <!-- Navbar vertical -->
-  <nav>
-    <ul>
-      <li><a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Inicio de la página">Inicio</a></li>
-      <li>
-        <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Ver todas las reservas naturales">Reservas Naturales</a>
-        <ul class="submenu">
-          <li><a href="#">Selvas</a></li>
-          <li><a href="#">Bosques</a></li>
-          <li><a href="#">Desiertos</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Ver refugios para diferentes animales">Refugios</a>
-        <ul class="submenu">
-          <li><a href="#">Mamíferos</a></li>
-          <li><a href="#">Reptiles</a></li>
-          <li><a href="#">Aves</a></li>
-        </ul>
-      </li>
-      <li><a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Información sobre proyectos actuales">Proyectos Actuales</a></li>
-      <li><a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Contáctanos para más detalles">Contacto</a></li>
-    </ul>
-  </nav>
 
- 
-</div>
  <!-- Breadcrumbs -->
  <div class="row">
+  <!-- Sección Bienvenida -->
+  <section id="sobre-nosotros" class="section-description">
+    <h3 class="text-center mb-4 p-3">Bienvenido (Proyecto Bootstrap)</h3>
+    <p class="text-justify">
+      Esta página sera de intermediario entre otras para el encontrar o ayudar a refugios de animales salvajes, se implemento bootstrap y se cambio ligeramente algunos aspectos en comparación a la pagina anterior como la orientación y disposición
+    </p>
+  </section>
   <div aria-label="breadcrumb">
     <ol class="breadcrumb m-3">
       <li class="breadcrumb-item"><a style="text-decoration: none;" href="inicio.html">Inicio</a></li>
       <li class="breadcrumb-item"><a style="text-decoration: none;" href="#" aria-current="page">Sección de Animales Salvajes</a></li>
     </ol>
   </div>
-  <!-- Sección Bienvenida -->
-  <section id="sobre-nosotros" class="section-description">
-    <h3 class="text-center mb-4">Bienvenido</h3>
-    <p class="text-justify">
-      Esta sección de nuestra página está orientada a ayudar a refugios de animales que suelen tener pocos recursos o mano de obra, tanto común como especializada, para los animales más salvajes. Estos se encuentran en refugios o reservas naturales. Por ello, se necesita más seriedad y profesionalismo con el objetivo de ayudar a la naturaleza.
-    </p>
-  </section>
 
   <!-- Main Content -->
-  <div class="main-section">
-    <div class="content-wrapper">
-      <!-- Carrusel -->
-      <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://picsum.photos/800/400?random=1" alt="Refugio 1" class="d-block w-100">
-            <div class="carousel-caption d-flex flex-column justify-content-center">
-              <h5>Refugio 1</h5>
-              <p>Descripción breve del refugio.</p>
-              <a href="#" class="btn btn-primary">Más detalles</a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://picsum.photos/800/400?random=2" alt="Refugio 2" class="d-block w-100">
-            <div class="carousel-caption d-flex flex-column justify-content-center">
-              <h5>Refugio 2</h5>
-              <p>Descripción breve del refugio.</p>
-              <a href="#" class="btn btn-primary">Más detalles</a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://picsum.photos/800/400?random=3" alt="Refugio 3" class="d-block w-100">
-            <div class="carousel-caption d-flex flex-column justify-content-center">
-              <h5>Refugio 3</h5>
-              <p>Descripción breve del refugio.</p>
-              <a href="#" class="btn btn-primary">Más detalles</a>
-            </div>
+   <!-- Aside (Acordeón) -->
+   <div class="container-fluid mt-4">
+    <div class="row">
+   <aside class="col-md-4 bg-light p-3 border-start sidebar">
+    <h5 style="color: #3c2f2f;">Lugares de Importancia</h5>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Inicio
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <a href="#inicio" class="text-decoration-none">Ir a Inicio</a>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
-        </button>
       </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Reservas Naturales
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <a href="#reservas-naturales" class="text-decoration-none">Ver Reservas Naturales</a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Refugios
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <a href="#refugios" class="text-decoration-none">Ver Refugios</a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Proyectos Actuales
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <a href="#proyectos-actuales" class="text-decoration-none">Ver Proyectos Actuales</a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Contacto
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <a href="#contacto" class="text-decoration-none">Ir a Contacto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  
+      <!-- Contenido Principal -->
+      <main class="col-md-8">
+        <div class="row">
+          <!-- Tarjetas con imagen y descripción breve -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="../img/refugio1.jpg" class="card-img-top" alt="Refugio 1">
+              <div class="card-body">
+                <h5 class="card-title">Centro de Recuperación de Fauna “LA GRANJA”</h5>
+                <p class="card-text">Descripción breve del refugio 1.</p>
+                <a href="#" class="btn btn-primary">Más detalles</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="../img/refugio2.jpg" class="card-img-top" alt="Refugio 2">
+              <div class="card-body">
+                <h5 class="card-title">Centro de Recuperación de Fauna de la Santa Faz Alicante</h5>
+                <p class="card-text">Descripción breve del refugio 2.</p>
+                <a href="#" class="btn btn-primary">Más detalles</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="../img/refugio3.jpg" class="card-img-top" alt="Refugio 3">
+              <div class="card-body">
+                <h5 class="card-title">Centro de Recuperació de Fauna Forn del Vidre (Castellón)</h5>
+                <p class="card-text">Descripción breve del refugio 3.</p>
+                <a href="#" class="btn btn-primary">Más detalles</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
 
-      <!-- Aside (Noticias) -->
-      <aside>
-        <div class="card">
-          <img src="https://picsum.photos/300/200?random=4" class="card-img-top" alt="Noticia">
-          <div class="card-body">
-            <h5 class="card-title">Noticia Destacada</h5>
-            <p class="card-text">Resumen breve de la noticia.</p>
-            <a href="#" class="btn btn-primary">Leer más</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://picsum.photos/300/200?random=4" class="card-img-top" alt="Noticia">
-          <div class="card-body">
-            <h5 class="card-title">Noticia Destacada</h5>
-            <p class="card-text">Resumen breve de la noticia.</p>
-            <a href="#" class="btn btn-primary">Leer más</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://picsum.photos/300/200?random=4" class="card-img-top" alt="Noticia">
-          <div class="card-body">
-            <h5 class="card-title">Noticia Destacada</h5>
-            <p class="card-text">Resumen breve de la noticia.</p>
-            <a href="#" class="btn btn-primary">Leer más</a>
-          </div>
-        </div>
-      </aside>
+      
     </div>
   </div>
- 
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Proyecto Refugios de Animales Salvajes</p>
-  </footer>
+ <!-- Sección Extra -->
+ <section id="extra-section" class="section-description d-flex justify-content-center align-items-center my-4">
+  <div class="extra-content text-center">
+    <h3 class="mb-4">Más Información</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <ul class="list-unstyled ">
+          <li><a href="#">Sobre nosotros</a></li>
+          <li><a href="#">Trabaja con Nosotros</a></li>
+          <li><a href="#">Cursos</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-unstyled">
+          <li><a href="#">Certificaciones</a></li>
+          <li><a href="#">Asociaciones</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-unstyled">
+          <li><a href="#">Contribuye a nuestros centros</a></li>
+          <li><a href="#">Redes sociales</a></li>
+          <li><a href="#">Noticias recientes</a></li>
+          <li><a href="#">Eventos próximos</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-justify mt-4">
+      Gracias por su visita y gracias de antemano por su ayuda.
+    </p>
+  </div>
+</section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-  <script src="../js/boot_tools.js"></script>
+<!-- Footer -->
+<footer class="mt-auto">
+  <p>&copy; Proyecto de Bootstrap - 2024</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+<script src="../js/boot_tools.js"></script>
 </body>
 </html>
