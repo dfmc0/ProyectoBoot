@@ -36,11 +36,13 @@ body {
   align-items: center;
   background-color: white;
   border-radius: 15px;
-  padding: 1rem; /* Puedes reducir a 0.5rem si prefieres más compactación */
+  padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 450px; /* Puedes reducir esto a un valor más bajo si quieres menos ancho */
+  max-width: 450px;
   width: 100%;
   margin: auto;
+  max-height: 35em;
+  overflow-y: auto;
 }
 
 #menu-enlaces {
@@ -69,6 +71,7 @@ form.inicio {
 .card:hover {
   transform: translateY(-5px);
 }
+
 .container {
   position: relative;
   flex: 1;
@@ -78,11 +81,31 @@ form.inicio {
   align-items: center;
   background-color: white;
   border-radius: 15px;
-  padding: 1rem; /* Puedes reducir a 0.5rem si prefieres más compactación */
+  padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 450px; /* Puedes reducir esto a un valor más bajo si quieres menos ancho */
+  max-width: 450px;
   width: 100%;
   margin: auto;
+}
+
+/* Ajustes para reducir la distancia vertical del formulario */
+.form-container {
+  margin-bottom: 10px;
+  padding: 0.5rem;
+}
+
+.form-container .form-label {
+  margin-bottom: 0.25rem;
+}
+
+.form-container .form-control {
+  margin-bottom: 0.25rem;
+  padding: 0.25rem;
+}
+
+.form-container .btn {
+  margin-top: 0.25rem;
+  padding: 0.25rem;
 }
 
 /* Footer */
@@ -92,7 +115,7 @@ form.inicio {
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   text-align: center;
-  margin-top: auto; /* Empuja el footer al final */
+  margin-top: auto;
 }
 
 .site-footer .collapse {
@@ -102,4 +125,78 @@ form.inicio {
 .site-footer button {
   width: 100%;
   max-width: 600px;
+}
+/* -------- -- - - - - -- - -  -- - -- -  - - - - - - - - - - */
+/* Media Queries oara 3 tamaños*/
+
+/* Pequeño: hasta 576px */
+@media (max-width: 576px) {
+  .main-container {
+    padding: 0.5rem;
+    max-width: 100%;
+    max-height: 80vh;
+  }
+
+  .form-container {
+    padding: 0.25rem;
+  }
+
+  .form-container .form-label,
+  .form-container .form-control,
+  .form-container .btn {
+    margin-bottom: 0.15rem;
+    padding: 0.15rem;
+  }
+
+  #menu-enlaces a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mediano: de 577px a 768px */
+@media (min-width: 577px) and (max-width: 768px) {
+  .main-container {
+    padding: 0.75rem;
+    max-width: 90%;
+    max-height: 85vh;
+  }
+
+  .form-container {
+    padding: 0.35rem;
+  }
+
+  .form-container .form-label,
+  .form-container .form-control,
+  .form-container .btn {
+    margin-bottom: 0.2rem;
+    padding: 0.2rem;
+  }
+
+  #menu-enlaces a {
+    font-size: 1rem;
+  }
+}
+
+/* Grande: de 769px en adelante */
+@media (min-width: 769px) {
+  .main-container {
+    padding: 1rem;
+    max-width: 450px;
+    max-height: 35em;
+  }
+
+  .form-container {
+    padding: 0.5rem;
+  }
+
+  .form-container .form-label,
+  .form-container .form-control,
+  .form-container .btn {
+    margin-bottom: 0.25rem;
+    padding: 0.25rem;
+  }
+
+  #menu-enlaces a {
+    font-size: 1.1rem;
+  }
 }

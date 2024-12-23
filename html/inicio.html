@@ -14,12 +14,12 @@
     <div class="right position-fixed top-0 end-0 w-50 h-100 bg-secondary"></div>
 
     <!-- Contenedor principal -->
-    <div class="main-container container w-50 bg-white shadow rounded text-center my-5">
+    <div class="main-container container w-50 bg-white shadow rounded text-center my-5 py-4">
 
         <!-- Enlaces para alternar entre formularios -->
         <nav class="mb-3">
             <div id="menu-enlaces" class="d-flex justify-content-center gap-3">
-                <a id="link-busqueda" href="#" class="text-success fw-bold text-decoration-none" onclick="mostrarFormulario('busqueda')">Búsqueda</a>
+                <a id="link-busqueda" href="#" class="text-success fw-bold text-decoration-none " onclick="mostrarFormulario('busqueda')">Búsqueda</a>
                 <a id="link-inicio" href="#" class="text-success fw-bold text-decoration-none" onclick="mostrarFormulario('inicio')">Inicia Sesión</a>
                 <a id="link-registro" href="#" class="text-success fw-bold text-decoration-none" onclick="mostrarFormulario('registro')">Registro</a>
             </div>
@@ -29,7 +29,7 @@
         <div id="busqueda" class="form-container">
             <h3 class="text-success">Bienvenido</h3>
             <form>
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="codigo" class="form-label">Introduce tu código Postal:</label>
                     <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Código Postal">
                 </div>
@@ -52,11 +52,11 @@
         <div id="inicio" class="form-container d-none">
             <h3 class="text-success">Inicia Sesión</h3>
             <form>
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="correo" class="form-label">Correo Electrónico:</label>
                     <input type="email" class="form-control" id="correo" name="correo" placeholder="Introduce tu correo">
                 </div>
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="contraseña" class="form-label">Contraseña:</label>
                     <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Contraseña">
                 </div>
@@ -68,15 +68,15 @@
         <div id="registro" class="form-container d-none">
             <h3 class="text-success">Regístrate</h3>
             <form>
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="correoRegistro" class="form-label">Correo Electrónico:</label>
                     <input type="email" class="form-control" id="correoRegistro" name="correoRegistro" placeholder="Introduce tu correo">
                 </div>
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="contraseñaRegistro" class="form-label">Contraseña:</label>
                     <input type="password" class="form-control" id="contraseñaRegistro" name="contraseñaRegistro" placeholder="Contraseña">
                 </div>
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="confirmaContraseña" class="form-label">Confirma Contraseña:</label>
                     <input type="password" class="form-control" id="confirmaContraseña" name="confirmaContraseña" placeholder="Confirma tu contraseña">
                 </div>

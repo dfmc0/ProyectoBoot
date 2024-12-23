@@ -5,18 +5,16 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
-  padding: 20px; /* Agrega padding a todo el cuerpo */
+  padding: 0 20px; /* Agrega padding a todo el cuerpo */
 }
 
 /* Header */
 header {
   background-image: url("../img/fondo_pagina2.png");
   background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+  background-size: contain; /* Hace que la imagen cubra todo el contenedor */
   background-position: center; /* Centra la imagen */
-  color: #fff;
   text-align: center;
-  height: 300px;
   width: 100%;
   margin-bottom: 20px; /* Agrega margen inferior */
 }
@@ -224,7 +222,7 @@ aside::-webkit-scrollbar-thumb:hover {
 }
 
 /* Responsividad */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .content-wrapper {
     flex-direction: column;
     align-items: center;
@@ -237,7 +235,8 @@ aside::-webkit-scrollbar-thumb:hover {
   aside {
     width: 100%;
     max-width: none;
-    max-height: 300px; /* Ajusta la altura en pantallas pequeñas */
+    max-height: none; /* Elimina la altura máxima en pantallas pequeñas */
+    overflow-y: visible; /* Elimina el scroll en pantallas pequeñas */
   }
 
   #sobre-nosotros {
@@ -248,6 +247,72 @@ aside::-webkit-scrollbar-thumb:hover {
   #extra-section {
     padding: 20px;
     font-size: 1rem;
+  }
+
+  header {
+    height: 200px; /* Ajusta la altura del header en pantallas pequeñas */
+    background-size: contain; /* Ajusta el tamaño de la imagen para que se contenga dentro del header */
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #mainCarousel {
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+    max-width: none;
+    max-height: none; /* Elimina la altura máxima en pantallas medianas */
+    overflow-y: visible; /* Elimina el scroll en pantallas medianas */
+  }
+
+  #sobre-nosotros {
+    padding: 30px;
+    font-size: 1.1rem;
+  }
+
+  #extra-section {
+    padding: 30px;
+    font-size: 1.1rem;
+  }
+
+  header {
+    height: 250px; /* Ajusta la altura del header en pantallas medianas */
+    background-size: contain; /* Ajusta el tamaño de la imagen para que se contenga dentro del header */
+  }
+}
+
+@media (min-width: 769px) {
+  .content-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  aside {
+    max-width: 300px;
+    max-height: 400px;
+    overflow-y: auto; /* Mantiene el scroll en pantallas grandes */
+  }
+
+  #sobre-nosotros {
+    padding: 40px;
+    font-size: 1.2rem;
+  }
+
+  #extra-section {
+    padding: 40px;
+    font-size: 1.2rem;
+  }
+
+  header {
+    height: 300px; /* Ajusta la altura del header en pantallas grandes */
+    background-size: contain; /* Ajusta el tamaño de la imagen para que cubra el header */
   }
 }
 

@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Ocultar el formulario de búsqueda por defecto y mostrar el formulario de inicio de sesión
+    mostrarFormulario('busqueda');
+});
 
 function mostrarFormulario(formulario) {
     // Ocultar todos los formularios y agregar la clase d-none

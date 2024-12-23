@@ -190,63 +190,67 @@
 
       </main>
 
-      <!-- Barra lateral derecha -->
-<!-- Barra lateral derecha -->
-<div class="col-md-2 bg-light p-3 border-start sidebar">
+     <!-- Barra lateral derecha -->
+<aside class="col-md-2 bg-light p-3 border-start sidebar">
   <h5 style="color: #3c2f2f;">Noticias y Consejos</h5>
 
-  <!-- Lista de enlaces a consejos -->
-  <ul class="list-unstyled">
-    <li><a href="#" class="text-decoration-none" style="color: #3c2f2f;">Consejos de alimentación</a></li>
-    <li><a href="#" class="text-decoration-none" style="color: #3c2f2f;">Vacunas necesarias</a></li>
-  </ul>
+  <!-- Botón para retraer noticias -->
+  <button class="btn btn-primary w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#noticiasCollapse" aria-expanded="false" aria-controls="noticiasCollapse">
+    Mostrar/Ocultar Noticias
+  </button>
 
-  <hr>
+  <!-- Contenedor colapsable de noticias -->
+  <div class="collapse" id="noticiasCollapse">
+    <!-- Lista de enlaces a consejos -->
+    <ul class="list-unstyled">
+      <li><a href="#" class="text-decoration-none" style="color: #3c2f2f;">Consejos de alimentación</a></li>
+      <li><a href="#" class="text-decoration-none" style="color: #3c2f2f;">Vacunas necesarias</a></li>
+    </ul>
 
-  <!-- Contenedor desplazable de noticias y consejos -->
-  <div class="scrollable-content">
-    <!-- Cartas para mostrar noticias o consejos -->
-    <div class="card mb-3" style="max-width: 18rem;">
-      <img src="https://picsum.photos/800/400?random=1" class="card-img-top" alt="Noticia 1">
-      <div class="card-body">
-        <h5 class="card-title" style="color: #3c2f2f;">Noticia 1: Nuevas recomendaciones para la salud de tu mascota</h5>
-        <p class="card-text" style="color: #3c2f2f;">Descubre cómo mejorar la calidad de vida de tus animales con estos consejos útiles sobre alimentación y salud.</p>
-        <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
+    <hr>
+
+    <!-- Contenedor desplazable de noticias y consejos -->
+    <div class="scrollable-content">
+      <!-- Cartas para mostrar noticias o consejos -->
+      <div class="card mb-3" style="max-width: 18rem;">
+        <img src="https://picsum.photos/800/400?random=1" class="card-img-top" alt="Noticia 1">
+        <div class="card-body">
+          <h5 class="card-title" style="color: #3c2f2f;">Noticia 1: Nuevas recomendaciones para la salud de tu mascota</h5>
+          <p class="card-text" style="color: #3c2f2f;">Descubre cómo mejorar la calidad de vida de tus animales con estos consejos útiles sobre alimentación y salud.</p>
+          <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 18rem;">
+        <img src="https://picsum.photos/800/400?random=2" class="card-img-top" alt="Noticia 2">
+        <div class="card-body">
+          <h5 class="card-title" style="color: #3c2f2f;">Noticia 2: Consejos para vacunar a tu perro</h5>
+          <p class="card-text" style="color: #3c2f2f;">Infórmate sobre los momentos ideales para vacunar a tu perro y mantenerlo saludable.</p>
+          <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 18rem;">
+        <img src="https://picsum.photos/800/400?random=3" class="card-img-top" alt="Noticia 3">
+        <div class="card-body">
+          <h5 class="card-title" style="color: #3c2f2f;">Noticia 3: Adopción de mascotas en refugios locales</h5>
+          <p class="card-text" style="color: #3c2f2f;">Entérate de las opciones para adoptar un perro o gato en tu ciudad y hacer una gran diferencia.</p>
+          <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
+        </div>
+      </div>
+
+      <!-- Agregar más cartas si es necesario -->
+      <div class="card mb-3" style="max-width: 18rem;">
+        <img src="https://picsum.photos/800/400?random=4" class="card-img-top" alt="Noticia 4">
+        <div class="card-body">
+          <h5 class="card-title" style="color: #3c2f2f;">Noticia 4: Preparación para las emergencias con mascotas</h5>
+          <p class="card-text" style="color: #3c2f2f;">Prepara tu hogar y a tu mascota ante posibles emergencias y situaciones imprevistas.</p>
+          <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
+        </div>
       </div>
     </div>
-
-    <div class="card mb-3" style="max-width: 18rem;">
-      <img src="https://picsum.photos/800/400?random=2" class="card-img-top" alt="Noticia 2">
-      <div class="card-body">
-        <h5 class="card-title" style="color: #3c2f2f;">Noticia 2: Consejos para vacunar a tu perro</h5>
-        <p class="card-text" style="color: #3c2f2f;">Infórmate sobre los momentos ideales para vacunar a tu perro y mantenerlo saludable.</p>
-        <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
-      </div>
-    </div>
-
-    <div class="card mb-3" style="max-width: 18rem;">
-      <img src="https://picsum.photos/800/400?random=3" class="card-img-top" alt="Noticia 3">
-      <div class="card-body">
-        <h5 class="card-title" style="color: #3c2f2f;">Noticia 3: Adopción de mascotas en refugios locales</h5>
-        <p class="card-text" style="color: #3c2f2f;">Entérate de las opciones para adoptar un perro o gato en tu ciudad y hacer una gran diferencia.</p>
-        <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
-      </div>
-    </div>
-
-    <!-- Agregar más cartas si es necesario -->
-    <div class="card mb-3" style="max-width: 18rem;">
-      <img src="https://picsum.photos/800/400?random=4" class="card-img-top" alt="Noticia 4">
-      <div class="card-body">
-        <h5 class="card-title" style="color: #3c2f2f;">Noticia 4: Preparación para las emergencias con mascotas</h5>
-        <p class="card-text" style="color: #3c2f2f;">Prepara tu hogar y a tu mascota ante posibles emergencias y situaciones imprevistas.</p>
-        <a href="#" class="btn btn-dark" style="background-color: #3c2f2f; color: white;">Leer más</a>
-      </div>
-    </div>
-
-    <!-- Puedes seguir agregando más noticias o consejos aquí -->
   </div>
 </aside>
-
 
     </div>
   </div>
