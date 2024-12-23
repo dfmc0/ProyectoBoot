@@ -16,7 +16,8 @@ body {
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen */
   padding: 10px; /* Espaciado interno */
-  background-color: #ffc88f; /* Color base para que coincida si la imagen no carga */}
+  background-color: #ffc88f; /* Color base para que coincida si la imagen no carga */
+}
 
 /* Header */
 header {
@@ -49,6 +50,8 @@ header {
   background-color: #f5f5dc; /* Beige claro */
   border-right: 1px solid #ccc;
   padding: 15px;
+  height: 100vh; /* Asegura que la barra lateral ocupe toda la altura de la ventana */
+  overflow-y: auto; /* Permite el desplazamiento si el contenido es demasiado grande */
 }
 
 .sidebar h5 {
@@ -62,6 +65,13 @@ header {
 .sidebar ul li a:hover {
   text-decoration: underline;
   color: #a58b65; /* Marrón claro para hover */
+}
+
+/* Sticky Sidebar */
+.sticky-sidebar {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
 
 /* Carrusel */
@@ -85,6 +95,7 @@ header {
 .blockquote-footer {
   color: #5a3d2e; /* Marrón */
 }
+
 /* Estilo para el contenedor desplazable */
 .scrollable-content {
   max-height: 900px;  /* Ajusta la altura máxima de la sección */
@@ -94,7 +105,6 @@ header {
 
 /* Footer */
 footer {
-
   color: #5a3d2e; /* Texto marrón */
   padding: 10px;
 }
